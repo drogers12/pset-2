@@ -28,27 +28,27 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-         System.out.print("\nEnter your first name: ");
-         String firstName = in.nextLine();
-
-         System.out.print("Enter your last name: ");
-         String lastName = in.nextLine();
-
-         System.out.print("Enter your grade: ");
-         int gradeLevel = in.nextInt();
-
-         System.out.print("Enter your age: ");
-         int age = in.nextInt();
-         in.nextLine();
-
-         System.out.print("Enter your hometown: ");
-         String homeTown = in.nextLine();
-
-
-         System.out.println("\nNAME \t :" + firstName + " " + lastName);
-         System.out.println("GRADE \t :" + gradeLevel);
-         System.out.println("AGE \t :" + age);
-         System.out.println("HOMETOWN :" + homeTown);
+         // System.out.print("\nEnter your first name: ");
+         // String firstName = in.nextLine();
+         //
+         // System.out.print("Enter your last name: ");
+         // String lastName = in.nextLine();
+         //
+         // System.out.print("Enter your grade: ");
+         // int gradeLevel = in.nextInt();
+         //
+         // System.out.print("Enter your age: ");
+         // int age = in.nextInt();
+         // in.nextLine();
+         //
+         // System.out.print("Enter your hometown: ");
+         // String homeTown = in.nextLine();
+         //
+         //
+         // System.out.println("\nNAME \t :" + firstName + " " + lastName);
+         // System.out.println("GRADE \t :" + gradeLevel);
+         // System.out.println("AGE \t :" + age);
+         // System.out.println("HOMETOWN :" + homeTown);
 
         /*
          * Exercise 2.
@@ -57,6 +57,15 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+         System.out.print("Enter a dollar amount: ");
+         double moneyTotal = in.nextDouble();
+
+         double centsLeft = moneyTotal%1
+         final double fullDollars = (moneyTotal-(moneyTotal%1));
+         final double fullQuarters =
+         final double fullDimes =
+         final double fullNickels =
+         final double fullPennies =
 
 
         /*
