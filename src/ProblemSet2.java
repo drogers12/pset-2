@@ -60,12 +60,41 @@ public class ProblemSet2 {
          System.out.print("Enter a dollar amount: ");
          double moneyTotal = in.nextDouble();
 
-         double centsLeft = moneyTotal%1
-         final double fullDollars = (moneyTotal-(moneyTotal%1));
-         final double fullQuarters =
-         final double fullDimes =
-         final double fullNickels =
-         final double fullPennies =
+         final double dollarValue = 1;
+         final double quarterValue = .25;
+         final double dimeValue = .1;
+         final double nickelValue = .05;
+
+
+
+
+         double moneyLeft = moneyTotal % dollarValue;
+         double dollarAmount = moneyTotal-(moneyLeft);
+         int integerDollarAmount = (int) Math.round (dollarAmount);
+         System.out.println("DOLLARS\t : " + integerDollarAmount);
+
+
+         double quarterAmount = (moneyLeft-(moneyLeft % quarterValue))/quarterValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue);
+         int integerQuarterAmount = (int) Math.round (quarterAmount);
+         System.out.println("QUARTERS : " + integerQuarterAmount);
+
+
+         double dimeAmount = (moneyLeft-(moneyLeft % dimeValue))/dimeValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue)-(dimeAmount*dimeValue);
+         int integerDimeAmount = (int) Math.round (dimeAmount);
+         System.out.println("DIMES\t : " + integerDimeAmount);
+
+
+         double nickelAmount = (moneyLeft-(moneyLeft % nickelValue))/nickelValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue)-(dimeAmount*dimeValue)-(nickelAmount*nickelValue);
+         int integerNickelAmount = (int) Math.round (nickelAmount);
+         System.out.println("NICKELS\t : " + integerNickelAmount);
+
+         double pennieAmount = moneyLeft*100;
+         int integerPennieAmount = (int) Math.round (pennieAmount);
+         System.out.println("PENNIES\t : " + integerPennieAmount);
+
 
 
         /*
@@ -75,6 +104,48 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+         System.out.print("Enter a dollar amount: ");
+         moneyTotal = in.nextDouble();
+
+         final double tenDollarBillValue = 10;
+         final double fiveDollarBillValue = 5;
+
+         double tenDollarBillAmount = (moneyTotal-(moneyTotal%tenDollarBillValue))/tenDollarBillValue;
+         int integerTenDollarBillAmount = (int) Math.round (tenDollarBillAmount);
+
+         double fiveDollarBillAmount = ((moneyTotal-(tenDollarBillAmount*tenDollarBillValue)%fiveDollarBillValue))/fiveDollarBillValue;
+         int integerFiveDollarBillAmount = (int) Math.round (fiveDollarBillAmount);
+
+
+
+
+
+         moneyLeft = moneyTotal % dollarValue;
+         dollarAmount = moneyTotal-(moneyLeft);
+         integerDollarAmount = (int) Math.round (dollarAmount);
+
+         int billsTotal = integerTenDollarBillAmount + integerFiveDollarBillAmount;
+         System.out.println(billsTotal);
+
+         quarterAmount = (moneyLeft-(moneyLeft % quarterValue))/quarterValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue);
+         integerQuarterAmount = (int) Math.round (quarterAmount);
+
+
+         dimeAmount = (moneyLeft-(moneyLeft % dimeValue))/dimeValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue)-(dimeAmount*dimeValue);
+         integerDimeAmount = (int) Math.round (dimeAmount);
+
+
+         nickelAmount = (moneyLeft-(moneyLeft % nickelValue))/nickelValue;
+         moneyLeft = moneyTotal-dollarAmount-(quarterAmount*quarterValue)-(dimeAmount*dimeValue)-(nickelAmount*nickelValue);
+         integerNickelAmount = (int) Math.round (nickelAmount);
+
+         pennieAmount = moneyLeft*100;
+         integerPennieAmount = (int) Math.round (pennieAmount);
+
+         int coinsTotal = integerQuarterAmount+integerDimeAmount+integerNickelAmount+integerPennieAmount;
+         System.out.println(coinsTotal);
 
 
         /*
