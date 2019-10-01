@@ -165,7 +165,15 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
-        
+        System.out.print("Enter a diameter: ");
+        double diameter = in.nextDouble();
+        double radius = diameter/2;
+
+        double circleArea = Math.PI*Math.pow(radius, 2);
+        double circleCircumference = 2*Math.PI*radius;
+
+        System.out.printf("\nAREA          : %.2f\n", circleArea);
+        System.out.printf("CIRCUMFERENCE : %.2f\n\n", circleCircumference);
 
         /*
          * Exercise 7.
@@ -174,7 +182,18 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
+        System.out.print("Enter a length: ");
+        double rectLength = in.nextDouble();
+        System.out.print("Enter a width: ");
+        double rectWidth = in.nextDouble();
 
+        double rectArea = rectLength*rectWidth;
+        double rectPerimeter = 2*rectLength+2*rectWidth;
+        double rectDiagonal = Math.hypot(rectLength, rectWidth);
+
+        System.out.printf("\nAREA      : %.2f\n", rectArea);
+        System.out.printf("PERIMETER : %.2f\n", rectPerimeter);
+        System.out.printf("DIAGONAL  : %.2f\n\n", rectDiagonal);
 
         /*
          * Exercise 8.
