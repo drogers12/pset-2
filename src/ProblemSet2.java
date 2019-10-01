@@ -233,14 +233,14 @@ public class ProblemSet2 {
          */
 
         System.out.print("Enter your first name: ");
-        String fname = in.next();
+        String fname = in.nextLine();
         System.out.print("Enter your middle name: ");
-        String mname = in.next();
+        String mname = in.nextLine();
         System.out.print("Enter your last name: ");
-        String lname = in.next();
+        String lname = in.nextLine();
 
         System.out.println("\n" + fname.substring(0,1) + mname.substring(0,1)
-            + lname.substring(0,1) + "\n");
+            + lname.substring(0,1));
 
         in.close();
     }
